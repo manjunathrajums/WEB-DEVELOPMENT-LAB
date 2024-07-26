@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        div{
+            position:relative;
+            left:33.33%;
+        }
+
+        form{
+            height: 300px;
+            width : 300px;
+            border :10px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1> STUDENT FEEDBACK FORM </h1>
+    <div>
+    <form>
+        <label for="name">
+            NAME :
+        </label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="email">
+            EMAIL :
+        </label>
+        <input type="text" name="email" id="email">
+        <br>
+        <label for="USN">
+            USN :
+        </label>
+        <input type="text" name="usn" id="usn">
+        <br>
+        <label for="Phone">
+            PHONE NUMBER :
+        </label>
+        <input type="number" name="Phone" id="Phone">
+        <br>
+        <label for="Gender">
+            GENDER :
+        </label>
+        <br>
+        <select name="Gender" id="Gender">
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
+
+        </select>
+        <br>
+        <input type="Submit" value="Submit" onclick="valid()">
+    </form>
+    </div>
+    <script>
+        function valid(){
+            var name = document.getElementById('name').value;
+            var email =document.getElementById('email').value;
+            var usn=document.getElementById('usn').value;
+            var phone=document.getElementById('Phone').value;
+            var gender = document.getElementById('Gender').value;
+            
+            if(name.length<5){
+                alert('Enter the right name');
+                return false;
+
+            }
+
+            if(!email.includes('@gmail.com')){
+                alert('Enter the right mail');
+                return false;
+            }
+
+            if(phone.length!=10){
+                alert("Enter right phone numbr");
+                return false;
+            }
+
+            var info = "NAME :"+" "+name+"\n" +"EMAIL :" +" "+email+"\n"+"USN"+" "+usn+"\n"+"phone number"+" "
+                        +phone+"\n"+"Gender :"+" "+gender+"\n";
+            alert(info);
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            color:brown;
+        }
+
+        .main{
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            padding-top:20%;
+        }
+
+        .sub{
+            display:flex;
+            justify-content:center;
+            align-items: center;   
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <form>
+        <label for="First">ENTER THE FIRST NUMBER</label>
+        <input type="number" id="First" name="First">
+        <br>
+        <br>
+        <label for="Second">ENTER THE FIRST NUMBER</label>
+        <input type="number" id="Second" name="Second">
+        <br>
+        <br>
+        <button type="button" value="+" onclick="addition()">+</button>
+        <button type="button" value="-"  onclick="sub()">-</button>
+        <button type="button" value="*"  onclick="mul()">*</button>
+        <button type="button" value="/"  onclick="div()">/</button>
+    </form>
+</div>
+<div class="sub">
+<p id="res"></p>
+</div>
+    <script>
+        function addition(){
+            var a =parseFloat(document.getElementById('First').value);
+            var b =parseFloat(document.getElementById('Second').value);
+            var res = a+b;
+            document.getElementById('res').innerHTML = "RESULT :" + " "+res;
+        }
+        function sub(){
+            var a =parseFloat(document.getElementById('First').value);
+            var b =parseFloat(document.getElementById('Second').value);
+            var res = a-b;
+            document.getElementById('res').innerHTML = "RESULT :" + " "+res;
+        }
+        function mul(){
+            var a =parseFloat(document.getElementById('First').value);
+            var b =parseFloat(document.getElementById('Second').value);
+            var res = a*b;
+            document.getElementById('res').innerHTML = "RESULT :" + " "+res;
+        }
+        function div(){
+            var a =parseFloat(document.getElementById('First').value);
+            var b =parseFloat(document.getElementById('Second').value);
+            var res = a/b;
+            document.getElementById('res').innerHTML = "RESULT :" + " "+res;
+        }
+    </script>
+</body>
+</html>

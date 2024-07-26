@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PROPERTIES</title>
+    <style>
+        .repeat{
+            width:100%;
+            height:550px;
+            background-image:url('./image.png');
+            background-repeat:repeat;
+        }
+        .norepeat{
+            width:100%;
+            height:550px;
+            background-image:url('./image.png');
+            background-repeat:no-repeat;
+        }
+        a{
+            color:red;
+        }
+        a:hover{
+            color:blue;
+        }
+        a:visited{
+            color:purple;
+        }    
+
+        .hide{
+            visibility: hidden;
+        }
+
+        .hoverme:hover + .hide{
+            visibility: visible;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>DIFFERENT FONT STYLES</h1>
+    <p style="font-family:Times;">THIS IS TIMES NEW ROAMN</p>
+    <p style="font-family:Segoe UI;">This is Segoe</p>
+    <p style="font-family:Helvetica;">This is helvitoca</p>
+    <p style="font-family:Arial;">This is arial</p>
+
+    <h2>BACKGOUND REPEAT</h2>
+    <p>BACK REP <div class="repeat"></div></p>
+    <p>BACK NO REP <div class="norepeat"></div></p>
+
+    <p>ANCHOR TAG</p>
+    <a href="https://www.volkswagen.com">volkswagen</a>
+    <a href="https://www.BMW.com/">BMW</a>
+
+
+    <div class="hoverme">HOVER OVER ME</div>
+    <div class="hide">
+        <img src="./image.png">
+        <p>The logo is hidden guys</p>
+    </div>
+</body>
+</html>
